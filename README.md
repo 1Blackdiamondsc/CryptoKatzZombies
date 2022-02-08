@@ -3,13 +3,28 @@
 Decentralized ZombieFactory 🎮 
 
 
+npm install package_name -g
+
+$
+npm install truffle -g
 
 
+npm install truffle truffle-hdwallet-provider
 
+$
+truffle init
 
+$
+truffle compile
 
+$
+truffle migrate --network rinkeby
 
+$
+npm install loom-truffle-provider
 
+$
+truffle migrate --network basechain
 
 
 
