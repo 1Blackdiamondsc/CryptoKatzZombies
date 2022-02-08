@@ -3,6 +3,7 @@ Decentralized ZombieFactory 🎮
 NPM
 
 Initialize your Node.js project
+
 $ 
 
 npm init -y
