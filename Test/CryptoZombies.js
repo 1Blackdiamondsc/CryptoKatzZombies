@@ -1,4 +1,4 @@
-const CryptoZombies = artifacts.require("CryptoZombies");
+const CryptoKatzZombies = artifacts.require("CryptoZombies");
 const utils = require("./helpers/utils");
 const time = require("./helpers/time");
 //TODO: import expect into our project
@@ -7,7 +7,7 @@ contract("CryptoZombies", (accounts) => {
 let [alice, bob] = accounts;
 let contractInstance;
 beforeEach(async () => {
-contractInstance = await CryptoZombies.new();
+contractInstance = await CryptoKatzZombies.new();
 });
 it("should be able to create a new zombie", async () => {
 const result = await contractInstance.createRandomZombie(zombieNames[0], {from: alice});
