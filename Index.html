@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CryptoZombies front-end</title>
+<title>CryptoKatzZombies front-end</title>
 <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script language="javascript" type="text/javascript" src="web3.min.js"></script>
-<script language="javascript" type="text/javascript" src="cryptozombies_abi.js"></script>
+<script language="javascript" type="text/javascript" src="cryptokatzzombies_abi.js"></script>
 </head>
 <body>
 <div id="txStatus"></div>
@@ -14,8 +14,8 @@
 var cryptoZombies;
 var userAccount;
 function startApp() {
-var cryptoZombiesAddress = "YOUR_CONTRACT_ADDRESS";
-cryptoZombies = new web3js.eth.Contract(cryptoZombiesABI, cryptoZombiesAddress);
+var cryptoKatzZombiesAddress = "YOUR_CONTRACT_ADDRESS";
+cryptoKatzZombies = new web3js.eth.Contract(cryptoKatzZombiesABI, cryptoKatzZombiesAddress);
 var accountInterval = setInterval(function() {
 // Check if account has changed
 if (web3.eth.accounts[0] !== userAccount) {
@@ -26,7 +26,7 @@ getZombiesByOwner(userAccount)
 } 
 
 }, 100);
-        cryptoZombies.events.Transfer({ filter: { _to: userAccount } })
+        cryptoKatzZombies.events.Transfer({ filter: { _to: userAccount } })
         .on("data", function(event) {
           let data = event.returnValues;
           getZombiesByOwner(userAccount).then(displayZombies);
@@ -77,7 +77,7 @@ $("#zombies").append(`<div class="zombie">
 
 // Send the tx to our contract: 
 
-return cryptoZombies.methods.createRandomZombie(name) 
+return cryptoKatzZombies.methods.createRandomZombie(name) 
 
 .send({ from: userAccount }) 
 
@@ -131,7 +131,7 @@ function levelUp(zombieId) {
 
 $("#txStatus").text("Leveling up your zombie..."); 
 
-return cryptoZombies.methods.levelUp(zombieId) 
+return cryptoKatzZombies.methods.levelUp(zombieId) 
 
 .send({ from: userAccount, value: web3.utils.toWei("0.001", "ether") }) 
 
@@ -150,19 +150,19 @@ $("#txStatus").text(error);
 
 function getZombieDetails(id) { 
 
-return cryptoZombies.methods.zombies(id).call() 
+return cryptoKatzZombies.methods.zombies(id).call() 
 
 } 
 
 function zombieToOwner(id) { 
 
-return cryptoZombies.methods.zombieToOwner(id).call() 
+return cryptoKatzZombies.methods.zombieToOwner(id).call() 
 
 } 
 
 function getZombiesByOwner(owner) { 
 
-return cryptoZombies.methods.getZombiesByOwner(owner).call()
+return cryptoKatzZombies.methods.getZombiesByOwner(owner).call()
 } 
 
 window.addEventListener('load', function() { 
