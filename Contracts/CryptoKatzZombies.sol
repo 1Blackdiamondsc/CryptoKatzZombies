@@ -1226,7 +1226,7 @@ contract CryptoKatzZombies is ERC721Enumerable, Ownable {
 
   string baseURI;
   string public baseExtension = ".json";
-  uint256 public cost = 0.01 avax;
+  uint256 public cost = 0.0001 ether;
   uint256 public maxSupply = 1011;
   uint256 public maxMintAmount = 1011;
   bool public paused = false;
