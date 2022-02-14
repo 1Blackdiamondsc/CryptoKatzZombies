@@ -4,6 +4,4 @@ Decentralized ZombieFactory 🎮
 
 CryptoKatzZombies... A Decentralized Blockchain Game Dapp Built On The Avalanche & Polygon Matic Network With More Networks Coming Soon.
 
-'npm intall'
-
-
+'npm intall web3'
