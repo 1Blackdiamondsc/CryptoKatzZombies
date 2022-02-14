@@ -1,0 +1,24 @@
+{
+  "name": "CryptoKatzZombies-8",
+  "version": "1.0.0",
+  "description": "![head-8@2x](https://user-images.githubusercontent.com/73549208/153045917-53860611-8e9f-4bd2-8b8f-b79553386bf9.png) # CryptoKatzZombies Decentralized ZombieFactory 🎮",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1Blackdiamondsc/CryptoKatzZombies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1Blackdiamondsc/CryptoKatzZombies/issues"
+  },
+  "homepage": "https://github.com/1Blackdiamondsc/CryptoKatzZombies#readme",
+  "dependencies": {
+    "ethers": "^5.5.4",
+    "zksync": "^0.12.0-alpha.6"
+  }
+}
